@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OneTImeWorkerActivity">
+
+    <TextView
+        android:id="@+id/network_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Network Type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:switchPadding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/network_title">
+
+        <RadioButton
+            android:id="@+id/connected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="connected"/>
+
+        <RadioButton
+            android:id="@+id/metered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="metered"/>
+
+        <RadioButton
+            android:id="@+id/not_required"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not required"/>
+
+        <RadioButton
+            android:id="@+id/not_roaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not roaming"/>
+
+        <RadioButton
+            android:id="@+id/unmetered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unmetered"/>
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/charging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:switchPadding="5dp"
+        android:text="Charging"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/network"/>
+
+    <Switch
+        android:id="@+id/storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="5dp"
+        android:text="Storage Not Low"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charging"/>
+
+    <Switch
+        android:id="@+id/battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:switchPadding="5dp"
+        android:text="Battery Not Low"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storage"/>
+
+    <Switch
+        android:id="@+id/idle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:switchPadding="5dp"
+        android:text="Device Idle RequiresApi(23)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battery"/>
+
+    <TextView
+        android:id="@+id/start"
+        android:text="Start"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="56dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
