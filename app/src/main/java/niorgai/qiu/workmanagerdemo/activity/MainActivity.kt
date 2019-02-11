@@ -14,11 +14,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.one_time).setOnClickListener(this)
+        findViewById<View>(R.id.content_uri_trigger).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.one_time -> startActivity(Intent(this, OneTImeWorkerActivity::class.java))
+            R.id.content_uri_trigger -> startActivity(Intent(this, ContentUriTriggerActivity::class.java))
         }
     }
 }

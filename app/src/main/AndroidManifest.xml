@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.ContentUriTriggerActivity">
+        </activity>
         <activity android:name=".activity.OneTImeWorkerActivity">
         </activity>
         <activity android:name=".activity.MainActivity">
