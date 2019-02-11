@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.one_time -> startActivity(Intent(this, OneTImeWorkerActivity::class.java))
             R.id.content_uri_trigger -> startActivity(Intent(this, ContentUriTriggerActivity::class.java))
+            R.id.chain -> startActivity(Intent(this, ChainedTaskActivity::class.java))
         }
     }
 }
