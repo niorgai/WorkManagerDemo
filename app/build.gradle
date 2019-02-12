@@ -28,7 +28,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 
-    def work_version = "1.0.0-beta04"
+    def work_version = "1.0.0-beta05"
     implementation "android.arch.work:work-runtime:$work_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

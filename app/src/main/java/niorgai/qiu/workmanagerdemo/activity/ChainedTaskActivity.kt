@@ -13,12 +13,6 @@ import java.util.*
 
 class ChainedTaskActivity : AppCompatActivity(), View.OnClickListener {
 
-    private val workA = OneTimeWorkRequest.Builder(WorkerA::class.java).build()
-    private val workB = OneTimeWorkRequest.Builder(WorkerB::class.java).build()
-    private val workC = OneTimeWorkRequest.Builder(WorkerC::class.java).build()
-    private val workD = OneTimeWorkRequest.Builder(WorkerD::class.java).build()
-    private val workE = OneTimeWorkRequest.Builder(WorkerE::class.java).build()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chained_task)
@@ -37,15 +31,24 @@ class ChainedTaskActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun firstChain() {
+        WorkManager.getInstance().cancelAllWork()
+        val workA = OneTimeWorkRequest.Builder(WorkerA::class.java).build()
+        val workB = OneTimeWorkRequest.Builder(WorkerB::class.java).build()
+        val workC = OneTimeWorkRequest.Builder(WorkerC::class.java).build()
         WorkManager.getInstance()
                 .beginWith(workA)
                 .then(workB)
                 .then(workC)
                 .enqueue()
-
     }
 
     private fun secondChain() {
+        WorkManager.getInstance().cancelAllWork()
+        val workA = OneTimeWorkRequest.Builder(WorkerA::class.java).build()
+        val workB = OneTimeWorkRequest.Builder(WorkerB::class.java).build()
+        val workC = OneTimeWorkRequest.Builder(WorkerC::class.java).build()
+        val workD = OneTimeWorkRequest.Builder(WorkerD::class.java).build()
+        val workE = OneTimeWorkRequest.Builder(WorkerE::class.java).build()
         WorkManager.getInstance()
                 .beginWith(Arrays.asList(workA, workB))
                 .then(workC)
@@ -55,6 +58,12 @@ class ChainedTaskActivity : AppCompatActivity(), View.OnClickListener {
 
     @SuppressLint("EnqueueWork")
     private fun thirdChain() {
+        WorkManager.getInstance().cancelAllWork()
+        val workA = OneTimeWorkRequest.Builder(WorkerA::class.java).build()
+        val workB = OneTimeWorkRequest.Builder(WorkerB::class.java).build()
+        val workC = OneTimeWorkRequest.Builder(WorkerC::class.java).build()
+        val workD = OneTimeWorkRequest.Builder(WorkerD::class.java).build()
+        val workE = OneTimeWorkRequest.Builder(WorkerE::class.java).build()
         val chain1 = WorkManager.getInstance()
                 .beginWith(workA)
                 .then(workB)
@@ -62,7 +71,7 @@ class ChainedTaskActivity : AppCompatActivity(), View.OnClickListener {
                 .beginWith(workC)
                 .then(workD)
         WorkContinuation.combine(Arrays.asList(chain1, chain2))
-                .then(workC)
+                .then(workE)
                 .enqueue()
     }
 }

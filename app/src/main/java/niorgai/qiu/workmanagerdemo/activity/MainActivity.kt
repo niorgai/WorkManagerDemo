@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         findViewById<View>(R.id.one_time).setOnClickListener(this)
         findViewById<View>(R.id.content_uri_trigger).setOnClickListener(this)
+        findViewById<View>(R.id.chain).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
