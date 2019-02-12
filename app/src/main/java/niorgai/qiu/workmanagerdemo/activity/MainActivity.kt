@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.one_time).setOnClickListener(this)
         findViewById<View>(R.id.content_uri_trigger).setOnClickListener(this)
         findViewById<View>(R.id.chain).setOnClickListener(this)
+        findViewById<View>(R.id.io).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.one_time -> startActivity(Intent(this, OneTImeWorkerActivity::class.java))
             R.id.content_uri_trigger -> startActivity(Intent(this, ContentUriTriggerActivity::class.java))
             R.id.chain -> startActivity(Intent(this, ChainedTaskActivity::class.java))
+            R.id.io -> startActivity(Intent(this, IOActivity::class.java))
         }
     }
 }

@@ -41,4 +41,15 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
 
+    <TextView
+        android:id="@+id/io"
+        android:text="Input And Output"
+        android:gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
 </LinearLayout>
