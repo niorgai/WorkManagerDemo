@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.PeriodicActivity">
+        </activity>
         <activity android:name=".activity.IOActivity">
         </activity>
         <activity android:name=".activity.ChainedTaskActivity">
         </activity>
         <activity android:name=".activity.ContentUriTriggerActivity">
         </activity>
-        <activity android:name=".activity.OneTImeWorkerActivity">
+        <activity android:name=".activity.OneTimeWorkerActivity">
         </activity>
         <activity android:name=".activity.MainActivity">
             <intent-filter>

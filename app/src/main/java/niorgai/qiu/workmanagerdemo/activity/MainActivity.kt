@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.one_time).setOnClickListener(this)
+        findViewById<View>(R.id.periodic).setOnClickListener(this)
         findViewById<View>(R.id.content_uri_trigger).setOnClickListener(this)
         findViewById<View>(R.id.chain).setOnClickListener(this)
         findViewById<View>(R.id.io).setOnClickListener(this)
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.one_time -> startActivity(Intent(this, OneTImeWorkerActivity::class.java))
+            R.id.one_time -> startActivity(Intent(this, OneTimeWorkerActivity::class.java))
+            R.id.periodic -> startActivity(Intent(this, PeriodicActivity::class.java))
             R.id.content_uri_trigger -> startActivity(Intent(this, ContentUriTriggerActivity::class.java))
             R.id.chain -> startActivity(Intent(this, ChainedTaskActivity::class.java))
             R.id.io -> startActivity(Intent(this, IOActivity::class.java))

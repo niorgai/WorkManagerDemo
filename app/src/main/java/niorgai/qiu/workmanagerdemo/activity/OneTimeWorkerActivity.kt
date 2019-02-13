@@ -13,7 +13,7 @@ import androidx.work.WorkManager
 import niorgai.qiu.workmanagerdemo.R
 import niorgai.qiu.workmanagerdemo.worker.TestWorker
 
-class OneTImeWorkerActivity : AppCompatActivity() {
+class OneTimeWorkerActivity : AppCompatActivity() {
 
     private lateinit var networkGroup: RadioGroup
     private lateinit var charging: Switch
